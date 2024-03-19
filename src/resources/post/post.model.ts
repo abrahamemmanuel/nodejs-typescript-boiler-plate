@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
 import Post from '@/resources/post/post.interface';
 
-const postSchema = new Schema(
+const PostSchema = new Schema(
 	{
 		title: {
 			type: String,
@@ -14,3 +14,5 @@ const postSchema = new Schema(
 	},
 	{ timestamps: true },
 );
+
+export default model<Post>('Post', PostSchema);
