@@ -26,7 +26,7 @@ class App {
 		this.express.use(cors());
 		this.express.use(morgan('dev'));
 		this.express.use(express.json());
-		this.express.use(express.urlencoded({ extended: true }));
+		this.express.use(express.urlencoded({ extended: false }));
 		this.express.use(compression());
 	}
 
@@ -37,7 +37,7 @@ class App {
 	}
 
 	private initializeErrorHandling(): void {
-		this.express.use(ErrorMiddleware());
+		this.express.use(ErrorMiddleware);
 	}
 
 	private initializeDatabaseConnection(): void {
