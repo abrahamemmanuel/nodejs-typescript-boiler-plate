@@ -45,6 +45,7 @@ class App {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 		} as mongoose.ConnectOptions);
+		console.log('Database connected');
 	}
 
 	public listen(): void {
